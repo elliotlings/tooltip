@@ -1,0 +1,98 @@
+body {
+	font-family: Tahoma;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 0;
+	padding: 0;
+}
+
+.clear:before,
+.clear:after {
+    content:"";
+    display:table;
+}
+.clear:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clear {
+    zoom:1;
+}
+
+/* Tooltip */
+.tooltip-container {
+	background-clip: padding-box;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background: rgb(25,25,25);
+	background: rgba(25,25,25,0.92);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(25,25,25,0.8)), to(rgba(25,25,25,0.9)));
+	background: -webkit-linear-gradient(top, rgba(25,25,25,0.8), rgba(25,25,25,0.9));
+	background:    -moz-linear-gradient(top, rgba(25,25,25,0.8), rgba(25,25,25,0.9));
+	background:       o-linear-gradient(top, rgba(25,25,25,0.8), rgba(25,25,25,0.9));
+	background: 	    linear-gradient(to bottom, rgba(25,25,25,0.8), rgba(25,25,25,0.9));
+	border: 1px solid #1c1c1c;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: 0 1px 3px #666, inset 0 1px 0 rgba(255,255,255,0.3);
+	color: #fff;
+	left: 40px;
+	padding: 10px;
+	position: absolute;
+	top: 40px;
+	text-shadow: 0 1px 0 #000;
+	z-index: 190;
+}
+.tooltip-close {
+	background: url(../img/closelabel.png) 0 0 no-repeat;
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	height: 8px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 8px;
+}
+.tooltip-container .arrow {
+	background: url(../img/arrows.png) no-repeat;
+	position: absolute;
+	z-index: 200;
+}
+.tooltip-container.n .arrow {
+	background-position: top center;
+	height: 9px;
+	left: 50%;
+	margin-left: -9px;
+	top: -9px;
+	width: 18px;
+}
+.tooltip-container.s .arrow {
+	background-position: bottom center;
+	bottom: -10px;
+	height: 10px;
+	left: 50%;
+	margin-left: -9px;
+	width: 18px;
+	z-index: 200;
+}
+.tooltip-container.e .arrow {
+	background-position: center right;
+	height: 18px;
+	margin-top: -7px;
+	position: absolute;
+	right: -9px;
+	top: 50%;
+	width: 9px;
+	z-index: 200;
+}
+.tooltip-container.w .arrow {
+	background-position: center left;
+	height: 18px;
+	left: -9px;
+	margin-top: -7px;
+	position: absolute;
+	top: 50%;
+	width: 9px;
+	z-index: 200;
+}
