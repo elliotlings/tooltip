@@ -220,7 +220,8 @@
         		});
         	}
 
-        	$('body').append(options.tooltip);
+			if(options.wrap) $(ele).wrap('<div />').append(options.tooltip);
+			else $('body').append(options.tooltip);
 
         	methods.position();
 
@@ -246,6 +247,7 @@
 		'content':"Empty",
 		'classes':null,
 		'id':null,
+		'wrap':false,
 		'openTrigger':'click',
 		'closeTrigger':'click',
 		'preventDefault':true,
