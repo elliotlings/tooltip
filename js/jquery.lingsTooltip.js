@@ -202,7 +202,7 @@
 	      		if(options.preload) methods.ajaxRequest();
 	      	}
 
-        	var tooltip = $(options.template.replace('{{content}}', options.content)).addClass('tooltip-' + options.tid + ' ' + options.classes).attr('id',options.id);
+        	var tooltip = $(options.template.replace('{{content}}', options.content)).addClass('tooltip-' + options.tid + (options.classes != null ? ' ' + options.classes : '').attr('id',options.id);
         	if(options.closeButton) tooltip.prepend($(options.closeButtonContents).click(function(e){ e.preventDefault(); methods.close(); }));
         	options.tooltip = tooltip.hide();
 	      	options.fade = options.fade || 0;
