@@ -301,7 +301,7 @@
     	}
     	$($.tooltip.autoTipDefaults.autoTipSelector).each(function(){ createTooltip(this); });
 
-	    $($.tooltip.autoTipDefaults.autoTipSelector).live('DOMNodeInserted', function(){
+	    $($.tooltip.autoTipDefaults.autoTipSelector).on('DOMNodeInserted', function(){
 	    	if($.tooltip.autoTipDefaults.autoTip) createTooltip(this);
 	    });
 
